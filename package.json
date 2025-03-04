@@ -1,0 +1,52 @@
+{
+  "name": "@dwidge/components-react-pdf",
+  "version": "0.0.0",
+  "description": "A collection of reusable React PDF components.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwidge/components-react-pdf.git"
+  },
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "prepare": "rimraf dist && ncp assets/ dist/ && tsc -b . tsconfig.cjs.json",
+    "test": "node --test --test-name-pattern"
+  },
+  "peerDependencies": {
+    "@dwidge/timezone-react": "^0.0.2",
+    "@react-pdf/layout": "3.12.1",
+    "@react-pdf/renderer": "3.4.2",
+    "assert": "^2.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@types/assert": "^1.5.10",
+    "@types/node": "^22.7.5",
+    "expect": "^29.7.0",
+    "ncp": "^2.0.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.7.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@9.12.1",
+  "engines": {
+    "node": ">=20"
+  }
+}

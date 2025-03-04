@@ -1,0 +1,1 @@
+export const StyledNotFound = () => null;
