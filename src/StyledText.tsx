@@ -68,6 +68,9 @@ export const textStyles = StyleSheet.create({
   m: {
     fontSize: 24,
   },
+  ms: {
+    fontSize: 18,
+  },
   s: {
     fontSize: 16,
   },

@@ -1,4 +1,3 @@
-
 import { Text, View } from "@react-pdf/renderer";
 import React, { PropsWithChildren } from "react";
 

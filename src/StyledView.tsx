@@ -1,6 +1,6 @@
 import { StyleSheet, View } from "@react-pdf/renderer";
 import { type Style } from "@react-pdf/stylesheet";
-import React, { ComponentProps } from "react";
+import React, { ComponentProps, createContext, useContext } from "react";
 
 type FlagKeysFromRecordKeys<T extends Record<string, any>> = {
   [K in keyof T]?: boolean;
@@ -17,7 +17,7 @@ type ViewStyleSheet = Record<string & "default", Style>;
 export const StyledView: React.FC<StyledViewProps> = ({
   children,
   style,
-  stylesheet = viewStyles,
+  stylesheet = useContext(ViewStyleSheetContext),
   ...props
 }) =>
   children && (
@@ -45,7 +45,7 @@ export const viewStyles = StyleSheet.create({
   default: {},
   flex: { flex: 1 },
   flex3: { flex: 3 },
-  wrap: { flexWrap: "wrap" }, // check if react-pdf supports flexWrap
+  // wrap: { flexWrap: "wrap" }, // check if react-pdf supports flexWrap
   overflowHidden: { overflow: "hidden" }, // check if react-pdf supports overflow: hidden
   rounded: { overflow: "hidden", borderRadius: 8 }, // check borderRadius support
   row: { flexDirection: "row", alignItems: "center" },
@@ -73,7 +73,7 @@ export const viewStyles = StyleSheet.create({
   nmargin: { margin: -20 },
   spad: { padding: 10 },
   xspad: { padding: 5 },
-  outline: { borderWidth: 1 },
+  outline: { borderWidth: 1, borderRadius: 8 },
   background: { backgroundColor: "#fff" },
   backgroundAlpha: { backgroundColor: "#fffe" },
   section: { backgroundColor: "#8882" },
@@ -103,3 +103,5 @@ export const viewStyles = StyleSheet.create({
     padding: 10,
   },
 });
+
+export const ViewStyleSheetContext = createContext(viewStyles);
