@@ -3,6 +3,7 @@ export * from "./DebugBlock.js";
 export * from "./Gap.js";
 export * from "./Icon.js";
 export * from "./ImageThumbs.js";
+export * from "./LinkImage.js";
 export * from "./NestLevelGuard.js";
 export * from "./StyledDate.js";
 export * from "./StyledLoader.js";
