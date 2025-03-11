@@ -64,6 +64,10 @@ export const viewStyles = StyleSheet.create({
     borderRadius: 8,
     borderColor: "red", // check borderColor support
   },
+  underline: {
+    borderBottomWidth: 1,
+    borderColor: "#888888",
+  },
   gap: { gap: 20 }, // check gap support, might need to use margin instead
   sgap: { gap: 10 }, // check gap support
   pad: { padding: 20 },
