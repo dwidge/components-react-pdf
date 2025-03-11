@@ -10,6 +10,7 @@ export type StyledTextProps<Styles extends TextStyleSheet = typeof textStyles> =
   {
     stylesheet?: Styles;
     numberOfLines?: number;
+    breakWord?: boolean;
   } & ComponentProps<typeof Text> &
     FlagKeysFromRecordKeys<Styles>;
 
@@ -19,10 +20,12 @@ export const StyledText: React.FC<PropsWithChildren<StyledTextProps>> = ({
   children,
   style,
   stylesheet = textStyles,
+  breakWord = false,
   ...props
 }) => {
   return children ? (
     <Text
+      hyphenationCallback={breakWord ? undefined : (s) => [s]}
       style={
         [
           stylesheet?.default,
