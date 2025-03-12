@@ -1,6 +1,6 @@
 {
   "name": "@dwidge/components-react-pdf",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A collection of reusable React PDF components.",
   "repository": {
     "type": "git",
