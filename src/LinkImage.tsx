@@ -1,4 +1,4 @@
-import { Image, Link } from "@react-pdf/renderer";
+import { Image, Link, View } from "@react-pdf/renderer";
 import { Style } from "@react-pdf/types";
 import { StyledText } from "./StyledText";
 
@@ -19,6 +19,7 @@ export const LinkImage = ({
         display: "flex",
       }
     }
+    wrap={false}
   >
     {name ? (
       <StyledText
@@ -27,6 +28,7 @@ export const LinkImage = ({
           textAlign: "center",
         }}
         s
+        minPresenceAhead={1}
       >
         {name}
       </StyledText>
