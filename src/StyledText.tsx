@@ -40,6 +40,7 @@ export const StyledText: React.FC<PropsWithChildren<StyledTextProps>> = ({
           ([k, _v]) => !Object.keys(stylesheet ?? {}).includes(k),
         ),
       )}
+      {...props}
     >
       {children}
     </Text>
