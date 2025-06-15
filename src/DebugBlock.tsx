@@ -13,7 +13,7 @@ export const DebugBlock = ({
   debug?: boolean;
 }>) =>
   debug ? (
-    <StyledView style={{ borderColor: "violet", borderWidth: 1 }}>
+    <StyledView style={{ borderColor: "violet", borderWidth: 1, margin: 1 }}>
       <StyledText
         style={{ margin: 0, backgroundColor: "violet", color: "white" }}
       >
