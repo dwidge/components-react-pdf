@@ -1,6 +1,6 @@
-import React, { ComponentProps, PropsWithChildren } from "react";
-import { Text, StyleSheet } from "@react-pdf/renderer";
+import { StyleSheet, Text } from "@react-pdf/renderer";
 import { type Style } from "@react-pdf/stylesheet";
+import React, { ComponentProps, PropsWithChildren } from "react";
 
 type FlagKeysFromRecordKeys<T extends Record<string, any>> = {
   [K in keyof T]?: boolean;
@@ -132,6 +132,7 @@ export const textStyles = StyleSheet.create({
   redBg: { backgroundColor: "red" },
   greenBg: { backgroundColor: "green" },
   orangeBg: { backgroundColor: "orange" },
+  cyanBg: { backgroundColor: "cyan" },
   colorTab: { color: "black" },
   colorLabel: { color: "blue" },
   colorHint: { color: "green" },
