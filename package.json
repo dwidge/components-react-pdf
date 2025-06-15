@@ -1,6 +1,6 @@
 {
   "name": "@dwidge/components-react-pdf",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A collection of reusable React PDF components.",
   "repository": {
     "type": "git",
@@ -25,7 +25,7 @@
     "test": "node --test --test-name-pattern"
   },
   "peerDependencies": {
-    "@dwidge/timezone-react": "^0.0.4",
+    "@dwidge/timezone-react": "^0.0.5",
     "@react-pdf/layout": "3.12.1",
     "@react-pdf/renderer": "3.4.2",
     "assert": "^2.1.0",
