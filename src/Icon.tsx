@@ -1,17 +1,20 @@
 import { Image } from "@react-pdf/renderer";
+import { useContext } from "react";
+import { ScaleContext } from "./StyledText";
 
 export const Icon: React.FC<{
   src: string;
   style?: Record<string, unknown>;
-}> = ({ src, style }) => (
+  scale?: number;
+}> = ({ src, style, scale = useContext(ScaleContext) }) => (
   <Image
     src={src}
     style={{
-      width: 25,
-      height: 25,
+      width: 25 * scale,
+      height: 25 * scale,
       borderRadius: "50%",
       overflow: "hidden",
-      padding: 2,
+      padding: 2 * scale,
       ...style,
     }}
   />
