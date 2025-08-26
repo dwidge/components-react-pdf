@@ -13,7 +13,10 @@ export const Bold: React.FC<PropsWithChildren> = ({ children, ...props }) => (
 );
 
 export const Block: React.FC<PropsWithChildren> = ({ children, ...props }) => (
-  <View style={{ border: 1, borderColor: "grey", borderRadius: 10 }} {...props}>
+  <View
+    style={{ borderWidth: 1, borderColor: "grey", borderRadius: 10 }}
+    {...props}
+  >
     {children}
   </View>
 );

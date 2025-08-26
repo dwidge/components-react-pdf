@@ -12,7 +12,7 @@ export const Icon: React.FC<{
     style={{
       width: 25 * scale,
       height: 25 * scale,
-      borderRadius: "50%",
+      borderRadius: 12,
       overflow: "hidden",
       padding: 2 * scale,
       ...style,
