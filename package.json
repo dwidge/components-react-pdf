@@ -26,8 +26,7 @@
   },
   "peerDependencies": {
     "@dwidge/timezone-react": "^0.0.6",
-    "@react-pdf/layout": "3.12.1",
-    "@react-pdf/renderer": "3.4.2",
+    "@react-pdf/renderer": "^4.3.0",
     "assert": "^2.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
